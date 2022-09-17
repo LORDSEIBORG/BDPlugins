@@ -1,0 +1,172 @@
+/**
+* @name Super Simple [TEST] Theme
+* @version 0.001
+* @description Simple custom theme.
+* @author 𝖘𝖊𝖎𝖇𝖔𝖗𝖌#0001
+* @authorId 175020535367991296
+* @source
+* @invite
+*/
+
+/* ----------------------------- O P T I O N S ------------------------------ */
+:root {
+
+  /* C O L O R S */
+  /* Random Accent Color */
+  --color-accent: 255,50,50; /* 130,180,230 - 150,200,250; */
+  /* Boarder */
+  --color-1: 10,10,13;
+  /* Channels and Members Sections*/
+  --color-2: 25,25,28;
+  /* Chat */
+  --color-3: 255,5,255; /* F I X  T H I S */
+
+  /* P A N E L S */
+  /* Channels and Members */
+  --chan-mem-panel-height: 97.8%;
+  --chan-mem-panel-boarder-radius: 13px;
+}
+/* -------------------------------------------------------------------------- */
+
+.theme-dark{
+  /* G E N E R A L  E L E M E N T S */
+  /* General default color variables */
+  --background-tertiary: rgba(var(--color-1), 1);
+  --background-primary: rgba(var(--color-1), 1);
+  --background-secondary:  rgba(var(--color-2), 1);
+  --background-secondary-alt: rgba(var(--color-2), 1);
+  /* --background-accent: rgba(var(--color-accent), 1); */
+  --background-floating: rgba(var(--color-2), 1);
+  --background-modifier-hover: rgba(255, 255, 255, 0.05);
+  --background-modifier-active: rgba(255, 255, 255, 0.05);
+  --background-modifier-selected: rgba(255, 255, 255, 0.05);
+  /* --background-modifier-accent: rgba(var(--color-3), 1); */
+  /* @ mention mesages */
+  --background-mentioned: rgba(var(--color-accent), 0.05);
+  --info-warning-foreground: rgba(var(--color-accent), 1);
+  --background-mentioned-hover: rgba(var(--color-accent), 0.08);
+  --background-message-hover: rgba(255, 255, 255, 0.01);
+  --channeltextarea-background: rgba(var(--color-2), 1);
+  --input-background: rgba(var(--color-2), 1);
+  /* Popup windows (Example: "boost this server" window) */
+    --modal-background: rgba(var(--color-1));
+    --modal-footer-background: rgba(var(--color-2));
+  /* Thin accent lines */
+  --background-modifier-accent: rgba(var(--color-2), 1);
+  /* T e x t */
+  --text-link: rgba(var(--color-accent), 0.8);
+  --header-primary: rgba(var(--color-accent), 1);
+  /* Channels Text */
+  /* --channel-icon: rgba(var(--color-accent), 0.8); */
+  --channels-default: rgba(var(--color-accent), 0.5);
+  --interactive-muted: rgba(var(--color-accent), 0.15);
+  --interactive-active: rgba(var(--color-accent), 1);
+  --interactive-hover: rgba(var(--color-accent), 1);
+  --text-warning: rgba(var(--color-accent), 1);
+  --text-danger: rgba(var(--color-accent), 1);
+  --text-brand: rgba(var(--color-accent), 1);
+  /* Scrollbars and Tracks */
+  --scrollbar-thin-thumb: rgba(var(--color-accent), 0.8);
+  --scrollbar-thin-track: rgba(var(--color-2), 0);
+  --scrollbar-auto-thumb: rgba(var(--color-accent), 0.7);
+  --scrollbar-auto-track: rgba(var(--color-2), 0);
+  --scrollbar-auto-scrollbar-color-thumb: rgba(var(--color-accent), 1);
+  --scrollbar-auto-scrollbar-color-track: rgba(var(--color-accent), 1);
+}
+/* -------------------------------------------------------------------------- */
+
+/* -------------------- S M A L L  A D J U S T M E N T S -------------------- */
+/* Highlighted text background color */
+::selection { background-color: rgba(var(--color-accent),0.5);}
+
+/* Discord Icon (top left) */
+/* Get rid of background */
+.childWrapper-1j_1ub {
+  --brand-experiment: transparent;
+}
+/* Set color of discord icon */
+.childWrapper-1j_1ub path {
+  --brand-experiment: transparent;
+  color: rgba(var(--color-accent), 1);
+}
+
+/* Top chat boarder bar color fix */
+.container-1-ERn5, .title-31SJ6t.container-ZMc96U.themed-Hp1KC_, .searchBar-3TnChZ,
+.theme-dark.container-ZMc96U.themed-Hp1KC_ {
+  background-color: rgba(var(--color-2), 1);
+}
+
+/* Server boost page fix */
+.perksModalContentWrapper-3RHugb {
+  background-color: rgba(var(--color-1));
+}
+
+/* Billing page fix */
+.paymentPane-ut5qKZ.verticalFit-21XL0v {
+  background-color: rgba(var(--color-2));
+}
+.verticalFit-21XL0v.paginator-1eqD2g,
+.hoverablePayment-lE1s4t.payment-2bOh4k.paymentRow-1HKOLu.bottomDivider-ZmTm-j {
+  background-color: rgba(var(--color-1));
+}
+
+/* Random small backgrounds for text panels */
+.formNotice-2nS8ey.cardPrimary-3qRT__.card-16VQ8C,
+.attendeeCTA-2etnq5.cardPrimary-3qRT__.card-16VQ8C {
+  background-color: rgba(var(--color-2));
+}
+
+/* "You're viewing old messages" */
+.jumpToPresentBar-1cEnH0.barBase-3xxDXu {
+  background-color: rgba(var(--color-accent), 1);
+}
+
+/* Forums background */
+.list-3FIpnh.auto-2K3UW5.scrollerBase-_bVAAt {
+  background-color: rgba(var(--color-2), 1);
+}
+
+/* Channel back panel */
+.container-1NXEtd {
+  background-color: rgba(255, 0, 0, 0);
+  border-bottom-left-radius: var(--chan-mem-panel-boarder-radius);
+  border-bottom-right-radius: var(--chan-mem-panel-boarder-radius);
+}
+/* Channels panel gradient */
+.sidebar-1tnWFu {
+  background-image: linear-gradient(rgba(var(--color-2), 1), rgba(var(--color-2), 0));
+  border-bottom-left-radius: var(--chan-mem-panel-boarder-radius);
+  border-bottom-right-radius: var(--chan-mem-panel-boarder-radius);
+}
+/* Direct messages members */
+.scroller-WSmht3.thin-31rlnD.scrollerBase-_bVAAt.fade-1R6FHN {
+  background-color: rgba(var(--color-1), 1);
+  background-image: linear-gradient(rgba(var(--color-2), 1), rgba(var(--color-2), 0));
+}
+
+/* Channels bottom panel adjustments */
+.sidebar-1tnWFu {
+  height: var(--chan-mem-panel-height);
+  background-color: rgba(255, 0, 0, 0);
+}
+.panels-3wFtMD {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Members top pannel */
+.members-3WRCEx {
+  --background-secondary: transparent;
+  background-color: transparent;
+}
+/* Members base panel */
+.container-2o3qEW {
+  height: var(--chan-mem-panel-height);
+  background-color: transparent;
+  /* background-image: linear-gradient(rgba(var(--color-2), 1), rgba(var(--color-2), 0)); */
+}
+.membersWrap-3NUR2t {
+  background-color: transparent;
+  background-image: linear-gradient(rgba(var(--color-2), 1), rgba(var(--color-2), 0));
+}
+
+/* -------------------------------------------------------------------------- */
